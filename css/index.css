@@ -1,0 +1,24 @@
+body {
+    background-color: black;
+}
+
+h1 {
+    color: blue;
+    text-align: center;
+}
+
+.box {
+    background-color: #212529;
+    width: 20rem;
+    height: 20rem;
+    border-radius: 40px;
+    border-color: #212529;
+    position: absolute;
+    min-width: 15rem;
+    min-height: 20rem;
+}
+
+#github {
+    width: 5rem;
+    height: 5rem;
+}
