@@ -9,22 +9,74 @@ h1 {
 
 .box {
     background-color: #212529;
-    width: 20rem;
-    height: 20rem;
+    width: 30em;
+    height: 15em;
     border-radius: 40px;
     position: fixed;
     border-color: #212529;
-    min-width: 20rem;
-    min-height: 20rem;
-    z-index: -2;
+    min-width: 20em;
+    min-height: 15em;
+    z-index: -5;
 }
 
-#github {
-    width: 5rem;
-    height: 5rem;
-    z-index: 1;
+.github {
+    position: fixed;
 }
 
-#name {
-    text-align: left;
+.github img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 310px;
+    top: 30px;
+}
+
+.github:hover img {
+    cursor: pointer;
+}
+
+.name p {
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    left: 140px;
+    top: 10px
+}
+
+.myself {
+    position: fixed;
+}
+
+.myself img {
+    width: 110px;
+    height: 110px;
+    border-radius: 55px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.about p {
+    position: absolute;
+    font-size: 15px;
+    color: white;
+    top: 100px;
+    left: 130px;
+    max-width: 350px;
+}
+
+.linkedin {
+    position: fixed;
+}
+
+.linkedin img {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    left: 355px;
+    top: 30px;
+}
+
+.linkedin:hover img {
+    cursor: pointer;
 }
