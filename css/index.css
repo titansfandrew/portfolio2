@@ -2,78 +2,75 @@ body {
     background-color: black;
 }
 
+canvas {
+    z-index: -6;
+}
+
 .box1 {
     background-color: #212529;
-    width: 30em;
-    height: 12em;
+    width: 30rem;
+    height: 12rem;
     position: absolute;
     border-radius: 40px;
     border-color: #212529;
-    min-width: 30em;
-    min-height: 12em;
+    min-width: 20rem;
+    min-height: 12rem;
     z-index: -5;
 }
 
 .box2 {
     background-color: #212529;
-    width: 30em;
-    height: 12em;
+    width: 30rem;
+    height: 12rem;
     border-radius: 40px;
     position: absolute;
     border-color: #212529;
-    min-width: 20em;
-    min-height: 12em;
+    min-width: 20rem;
+    min-height: 12rem;
     z-index: -5;
-    left: 500px;
+    left: 31.25rem;
 }
 
-.github {
-    position: fixed;
+.box3 {
+    background-color: #212529;
+    width: 30rem;
+    height: 6rem;
+    position: absolute;
+    border-radius: 40px;
+    border-color: #212529;
+    min-width: 20rem;
+    min-height: 6rem;
+    z-index: -5;
+    top: 13.75em;
 }
 
 .github img {
-    width: 50px;
-    height: 50px;
+    width: 3.125em;
+    height: 3.125em;
     position: absolute;
     left: 145px;
     top: 115px;
 }
 
-.github:hover img {
-    cursor: pointer;
-}
-
-.linkedin {
-    position: fixed;
-}
-
 .linkedin img {
-    width: 50px;
-    height: 50px;
+    width: 3.125em;
+    height: 3.125em;
     position: absolute;
     left: 195px;
     top: 115px;
 }
 
-.linkedin:hover img {
-    cursor: pointer;
-}
-
 .name p {
     position: absolute;
-    font-size: 50px;
+    font-size: 3em;
     color: white;
     left: 145px;
     top: 10px;
 }
 
-.myself {
-    position: fixed;
-}
-
 .myself img {
-    width: 130px;
-    height: 140px;
+    width: 8em;
+    height: 9em;
     border-radius: 55px;
     position: absolute;
     left: 10px;
@@ -82,9 +79,9 @@ body {
 
 .about p {
     position: absolute;
-    font-size: 15px;
+    font-size: 0.9375em;
     color: white;
-    max-width: 350px;
+    max-width: 21.875em;
     text-align: center;
     left: 70px;
 }
@@ -92,5 +89,11 @@ body {
 .box2 h1 {
     color: white;
     text-align: center;
-    font-size: 25px;
+    font-size: 1.5625em;
+}
+
+.box3 h1 {
+    color: white;
+    text-align: center;
+    font-size: 1.15em;
 }

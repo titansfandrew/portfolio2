@@ -1,26 +1,29 @@
-// Create and style the canvas
 const canvas = document.createElement("canvas");
 canvas.style.position = "fixed";
 canvas.style.top = "0";
 canvas.style.left = "0";
-canvas.style.width = "100vw";
-canvas.style.height = "100vh";
+canvas.style.width = "100%";
+canvas.style.height = "100%";
 canvas.style.pointerEvents = "none";
-canvas.style.zIndex = "-6"; // Ensures it stays in the background
+canvas.style.zIndex = "-6";
 document.body.appendChild(canvas);
 
 const ctx = canvas.getContext("2d");
-const stars = [];
 const numStars = 100;
+let stars = [];
 
-// Initialize stars with random positions and brightness
-for (let i = 0; i < numStars; i++) {
-  stars.push({
-    x: Math.random() * window.innerWidth,
-    y: Math.random() * window.innerHeight,
-    brightness: Math.random(),
-    speed: Math.random() * 0.001 + 0.001, // Reduced speed
-  });
+if (localStorage.getItem('stars')) {
+  stars = JSON.parse(localStorage.getItem('stars'));
+} else {
+  for (let i = 0; i < numStars; i++) {
+    stars.push({
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight,
+      brightness: Math.random(),
+      speed: Math.random() * 0.001 + 0.001,
+    });
+  }
+  localStorage.setItem('stars', JSON.stringify(stars));
 }
 
 function drawStars() {
@@ -28,7 +31,7 @@ function drawStars() {
   for (let star of stars) {
     star.brightness += star.speed;
     if (star.brightness > 1 || star.brightness < 0) {
-      star.speed *= -1; // Reverse the fade direction
+      star.speed *= -1;
     }
     ctx.beginPath();
     ctx.arc(star.x, star.y, 2, 0, Math.PI * 2);
