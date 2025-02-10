@@ -52,12 +52,54 @@ canvas {
     top: 115px;
 }
 
+.tooltip1 {
+    visibility: hidden;
+    width: 120px;
+    background-color: #333b3f;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+
+    position: absolute;
+    top: 165px;
+    left: 115px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+.github:hover .tooltip1 {
+    visibility: visible;
+    opacity: 1;
+}
+
 .linkedin img {
     width: 3.125em;
     height: 3.125em;
     position: absolute;
     left: 195px;
     top: 115px;
+}
+
+.tooltip2 {
+    visibility: hidden;
+    width: 125px;
+    background-color: #333b3f;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+
+    position: absolute;
+    top: 165px;
+    left: 165px;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+.linkedin:hover .tooltip2 {
+    visibility: visible;
+    opacity: 1;
 }
 
 .name p {
@@ -109,39 +151,25 @@ canvas {
 }
 
 .fading {
-    animation-duration: 5s;
-    animation-name: fade;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in;
-}
-
-@keyframes fade {
-    from { left: 0px; opacity: 1;}
-    to { left: 480px; opacity: 0;}
-}
-
-
-
-/*
-.movingText {
-    position: relative;
-    animation-duration: 5s;
-    animation-name: moveText;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
-}
-
-@keyframes moveText {
-    0% {opacity: 0%;}
-    25% {opacity: 50%;}
-    50% {opacity: 100%;}
-    75% {opacity: 50%;}
-    100% {opacity: 0%;}
-    from { left: 0px; }
-    to { left:350px; }
-}
-*/
-
-
-
+    animation: left-to-right-fade-in 5s ease-in infinite alternate;
+    mask-repeat: no-repeat;
+  }
+  
+  @keyframes left-to-right-fade-in {
+    0% {
+      mask-size: 0%;
+      mask-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 1) 70%,
+        rgba(0, 0, 0, 0)
+      );
+    }
+    100% {
+      mask-size: 200%;
+      mask-image: linear-gradient(
+        to right,
+        rgba(0, 0, 0, 1) 70%,
+        rgba(0, 0, 0, 0)
+      );
+    }
+  }
