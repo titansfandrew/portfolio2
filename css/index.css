@@ -34,12 +34,12 @@ canvas {
 .box3 {
     background-color: #212529;
     width: 30rem;
-    height: 6rem;
+    height: 7rem;
     position: absolute;
     border-radius: 40px;
     border-color: #212529;
     min-width: 20rem;
-    min-height: 6rem;
+    min-height: 7rem;
     z-index: -5;
     top: 13.75em;
 }
@@ -96,4 +96,52 @@ canvas {
     color: white;
     text-align: center;
     font-size: 1.15em;
+    z-index: -2;
 }
+
+.size {
+    font-size: 1.25em;
+    color: white;
+    text-align: center;
+    word-spacing: 15px;
+    position: relative;
+    top: 10px
+}
+
+.fading {
+    animation-duration: 5s;
+    animation-name: fade;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+}
+
+@keyframes fade {
+    from { left: 0px; opacity: 1;}
+    to { left: 480px; opacity: 0;}
+}
+
+
+
+/*
+.movingText {
+    position: relative;
+    animation-duration: 5s;
+    animation-name: moveText;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes moveText {
+    0% {opacity: 0%;}
+    25% {opacity: 50%;}
+    50% {opacity: 100%;}
+    75% {opacity: 50%;}
+    100% {opacity: 0%;}
+    from { left: 0px; }
+    to { left:350px; }
+}
+*/
+
+
+
