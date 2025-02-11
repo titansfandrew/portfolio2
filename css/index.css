@@ -132,11 +132,12 @@ body {
 /* name styles */
 .name {
     position: absolute;
-    font-size: 2em;
+    font-size: 2.7em;
     color: white;
     text-wrap: nowrap;
     text-align: center;
     left: 130px;
+    top: -20px;
 }
 /* my picture style */
 .myself img {
@@ -149,6 +150,14 @@ body {
     left: 10px;
     top: 6px;
     float: left;
+}
+
+.dev {
+    position: absolute;
+    font-size: 1.1em;
+    color: teal;
+    left: 130px;
+    top: 55px;
 }
 /* about text styling */
 .about p {
