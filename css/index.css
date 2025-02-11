@@ -1,40 +1,51 @@
 body {
     background-color: black;
+    width: 100%;
 }
 
-canvas {
-    z-index: -6;
+/* boxes styles */
+.allBoxes {
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
+    display: center;
+    box-sizing: border-box;
 }
 
 .box1 {
     background-color: #212529;
-    width: 30rem;
-    height: 12rem;
+    width: 100%;
+    height: 100%;
     position: absolute;
     border-radius: 40px;
     border-color: #212529;
-    min-width: 20rem;
-    min-height: 12rem;
+    max-width: 30rem;
+    max-height: 12rem;
     z-index: -5;
+    float: left;
 }
 
 .box2 {
     background-color: #212529;
-    width: 30rem;
-    height: 12rem;
+    width: 100%;
+    height: 100%;
     border-radius: 40px;
     position: absolute;
     border-color: #212529;
-    min-width: 20rem;
-    min-height: 12rem;
+    max-width: 30rem;
+    max-height: 12rem;
     z-index: -5;
     left: 31.25rem;
+    float: left;
 }
 
 .box3 {
     background-color: #212529;
-    width: 30rem;
-    height: 7rem;
+    width: 100%;
+    height: 100%; 
+    max-width: 30rem;
+    max-height: 7rem;
     position: absolute;
     border-radius: 40px;
     border-color: #212529;
@@ -42,14 +53,31 @@ canvas {
     min-height: 7rem;
     z-index: -5;
     top: 13.75em;
+    float: left;
+}
+/* box h1 styling */
+.box2 h1 {
+    color: white;
+    text-align: center;
+    font-size: 1.5625em;
 }
 
+.box3 h1 {
+    color: white;
+    text-align: center;
+    font-size: 1.15em;
+    z-index: -2;
+}
+/* github styles */
 .github img {
-    width: 3.125em;
-    height: 3.125em;
+    width: 100%;
+    height: 100%;
+    max-width: 3.125em;
+    max-height: 3.125em;
     position: absolute;
     left: 145px;
     top: 115px;
+    float: left;
 }
 
 .tooltip1 {
@@ -72,13 +100,16 @@ canvas {
     visibility: visible;
     opacity: 1;
 }
-
+/* linkedin styles */
 .linkedin img {
-    width: 3.125em;
-    height: 3.125em;
+    width: 100%;
+    height: 100%;
+    max-width: 3.125em;
+    max-height: 3.125em;
     position: absolute;
     left: 195px;
     top: 115px;
+    float: left;
 }
 
 .tooltip2 {
@@ -101,53 +132,48 @@ canvas {
     visibility: visible;
     opacity: 1;
 }
-
+/* name styles */
 .name p {
     position: absolute;
     font-size: 3em;
     color: white;
-    left: 145px;
+    width: 100%;
+    height: 100%;
     top: 10px;
+    text-wrap: nowrap;
+    text-align: center;
+    left: 10%;
 }
-
+/* my picture style */
 .myself img {
-    width: 8em;
-    height: 9em;
+    width: 100%;
+    height: 100%;
+    max-width: 8em;
+    max-height: 9em;
     border-radius: 55px;
     position: absolute;
-    left: 10px;
-    top: 25px;
+    left: 2%;
+    top: 13%;
+    float: left;
 }
-
+/* about text styling */
 .about p {
     position: absolute;
     font-size: 0.9375em;
     color: white;
-    max-width: 21.875em;
+    width: 100%;
+    height: 100%;
     text-align: center;
-    left: 70px;
+    text-wrap: wrap;
 }
-
-.box2 h1 {
-    color: white;
-    text-align: center;
-    font-size: 1.5625em;
-}
-
-.box3 h1 {
-    color: white;
-    text-align: center;
-    font-size: 1.15em;
-    z-index: -2;
-}
-
+/* skills styling */
 .size {
     font-size: 1.25em;
     color: white;
     text-align: center;
     word-spacing: 15px;
-    position: relative;
-    top: 10px
+    vertical-align: middle;
+    top: 10px;
 }
 
 .fading {
@@ -171,5 +197,12 @@ canvas {
         rgba(0, 0, 0, 1) 70%,
         rgba(0, 0, 0, 0)
       );
+    }
+  }
+/* mobile responsive styles */
+  @media screen and (max-width: 800px) {
+    .box1 .box2 .box3 {
+        height: 21%;
+        width: 100%;
     }
   }

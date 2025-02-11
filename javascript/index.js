@@ -12,9 +12,8 @@ const ctx = canvas.getContext("2d");
 const numStars = 100;
 let stars = [];
 
-if (localStorage.getItem('stars')) {
-  stars = JSON.parse(localStorage.getItem('stars'));
-} else {
+function initStars() {
+  stars = [];
   for (let i = 0; i < numStars; i++) {
     stars.push({
       x: Math.random() * window.innerWidth,
@@ -23,7 +22,6 @@ if (localStorage.getItem('stars')) {
       speed: Math.random() * 0.001 + 0.001,
     });
   }
-  localStorage.setItem('stars', JSON.stringify(stars));
 }
 
 function drawStars() {
@@ -45,9 +43,15 @@ function resizeCanvas() {
   canvas.width = window.innerWidth * window.devicePixelRatio;
   canvas.height = window.innerHeight * window.devicePixelRatio;
   ctx.scale(window.devicePixelRatio, window.devicePixelRatio);
+
+  if (stars.length === 0 || Math.abs(canvas.width - window.innerWidth) > 100) {
+    initStars();
+  }
+
 }
 
 window.addEventListener("resize", resizeCanvas);
 window.addEventListener("orientationchange", resizeCanvas);
 resizeCanvas();
+initStars();
 drawStars();
