@@ -72,88 +72,82 @@ body {
 .github img {
     width: 100%;
     height: 100%;
-    max-width: 3.125em;
-    max-height: 3.125em;
+    max-width: 2.3em;
+    max-height: 2.3em;
     position: absolute;
-    left: 145px;
-    top: 115px;
-    float: left;
+    left: 45px;
+    top: 5px;
+    z-index: 2;
 }
 
-.tooltip1 {
-    visibility: hidden;
-    width: 120px;
+#gitborder {
+    border-radius: 40px;
     background-color: #333b3f;
-    color: #fff;
-    border-radius: 10px;
-    text-align: center;
-
+    width: 200px;
+    height: 50px;
+    border-color: #333b3f;
     position: absolute;
-    top: 165px;
-    left: 115px;
-    z-index: 1;
-    opacity: 0;
-    transition: opacity .5s ease-in-out;
+    left: 30px;
+    top: 125px;
+    z-index: -1;
 }
 
-.github:hover .tooltip1 {
-    visibility: visible;
-    opacity: 1;
+.github p {
+    color: white;
+    position: absolute;
+    left: 85px;
+    text-align: center;
 }
 /* linkedin styles */
 .linkedin img {
     width: 100%;
     height: 100%;
-    max-width: 3.125em;
-    max-height: 3.125em;
+    max-width: 2.3em;
+    max-height: 2.3em;
     position: absolute;
-    left: 195px;
-    top: 115px;
+    left: 40px;
+    top: 5px;
     float: left;
+    z-index: 2;
 }
 
-.tooltip2 {
-    visibility: hidden;
-    width: 125px;
+#linkedinborder {
+    border-radius: 40px;
     background-color: #333b3f;
-    color: #fff;
-    border-radius: 10px;
-    text-align: center;
-
+    width: 200px;
+    height: 50px;
+    border-color: #333b3f;
     position: absolute;
-    top: 165px;
-    left: 165px;
-    z-index: 1;
-    opacity: 0;
-    transition: opacity .5s ease-in-out;
+    left: 250px;
+    top: 125px;
+    z-index: -1;
 }
 
-.linkedin:hover .tooltip2 {
-    visibility: visible;
-    opacity: 1;
+.linkedin p {
+    color: white;
+    position: absolute;
+    left: 80px;
+    text-align: center;
 }
 /* name styles */
-.name p {
+.name {
     position: absolute;
-    font-size: 3em;
+    font-size: 2em;
     color: white;
-    width: 100%;
-    height: 100%;
-    top: 10px;
     text-wrap: nowrap;
     text-align: center;
-    left: 10%;
+    left: 130px;
 }
 /* my picture style */
 .myself img {
     width: 100%;
     height: 100%;
-    max-width: 8em;
-    max-height: 9em;
-    border-radius: 55px;
+    max-width: 7em;
+    max-height: 7em;
+    border-radius: 70px;
     position: absolute;
-    left: 2%;
-    top: 13%;
+    left: 10px;
+    top: 6px;
     float: left;
 }
 /* about text styling */
