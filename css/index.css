@@ -5,55 +5,45 @@ body {
 
 /* boxes styles */
 .allBoxes {
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: center;
-    width: 100%;
-    display: center;
-    box-sizing: border-box;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    gap: 10px;
+    display: flex;
+    
 }
 
 .box1 {
     background-color: #212529;
-    width: 100%;
-    height: 100%;
-    position: absolute;
+    width: 30rem;
+    height: 12rem;
     border-radius: 40px;
     border-color: #212529;
     max-width: 30rem;
     max-height: 12rem;
     z-index: -5;
-    float: left;
 }
 
 .box2 {
     background-color: #212529;
-    width: 100%;
-    height: 100%;
+    width: 30rem;
+    height: 12rem;
     border-radius: 40px;
-    position: absolute;
     border-color: #212529;
     max-width: 30rem;
     max-height: 12rem;
     z-index: -5;
-    left: 31.25rem;
-    float: left;
 }
 
 .box3 {
     background-color: #212529;
-    width: 100%;
-    height: 100%; 
+    width: 30rem;
+    height: 7rem; 
     max-width: 30rem;
     max-height: 7rem;
-    position: absolute;
     border-radius: 40px;
     border-color: #212529;
-    min-width: 20rem;
-    min-height: 7rem;
     z-index: -5;
-    top: 13.75em;
-    float: left;
+    
 }
 /* box h1 styling */
 .box2 h1 {
@@ -69,15 +59,21 @@ body {
     z-index: -2;
 }
 /* github styles */
+
+.box1-elements {
+    display: flex;
+    flex-flow: column wrap;
+}
+
 .github img {
-    width: 100%;
-    height: 100%;
+    width: 2.3em;
+    height: 2.3em;
     max-width: 2.3em;
     max-height: 2.3em;
-    position: absolute;
     left: 45px;
     top: 5px;
     z-index: 2;
+    order: 3;
 }
 
 #gitborder {
@@ -85,18 +81,20 @@ body {
     background-color: #333b3f;
     width: 200px;
     height: 50px;
+    max-width: 200px;
+    max-height: 50px;
     border-color: #333b3f;
-    position: absolute;
     left: 30px;
     top: 125px;
-    z-index: -1;
+    z-index: 2;
+    order: 3;
 }
 
 .github p {
     color: white;
-    position: absolute;
     left: 85px;
     text-align: center;
+    order: 3;
 }
 /* linkedin styles */
 .linkedin img {
@@ -104,34 +102,34 @@ body {
     height: 100%;
     max-width: 2.3em;
     max-height: 2.3em;
-    position: absolute;
     left: 40px;
     top: 5px;
-    float: left;
     z-index: 2;
+    order: 4;
 }
 
 #linkedinborder {
     border-radius: 40px;
     background-color: #333b3f;
+    width: 100%;
+    height: 100%;
     width: 200px;
     height: 50px;
     border-color: #333b3f;
-    position: absolute;
     left: 250px;
     top: 125px;
-    z-index: -1;
+    z-index: 2;
+    order: 4;
 }
 
 .linkedin p {
     color: white;
-    position: absolute;
     left: 80px;
     text-align: center;
+    order: 4;
 }
 /* name styles */
 .name {
-    position: absolute;
     font-size: 2.7em;
     color: white;
     text-wrap: nowrap;
@@ -141,27 +139,25 @@ body {
 }
 /* my picture style */
 .myself img {
-    width: 100%;
-    height: 100%;
+    width: 7em;
+    height: 7em;
     max-width: 7em;
     max-height: 7em;
     border-radius: 70px;
-    position: absolute;
     left: 10px;
     top: 6px;
-    float: left;
+    justify-content: start;
+    order: 1;
 }
-
+/* dev text styling */
 .dev {
-    position: absolute;
     font-size: 1.1em;
     color: teal;
-    left: 130px;
-    top: 55px;
+    text-align: center;
+    order: 2;
 }
 /* about text styling */
 .about p {
-    position: absolute;
     font-size: 0.9375em;
     color: white;
     width: 100%;
@@ -203,9 +199,14 @@ body {
     }
   }
 /* mobile responsive styles */
-  @media screen and (max-width: 800px) {
-    .box1 .box2 .box3 {
-        height: 21%;
-        width: 100%;
+  @media all and (max-width: 500px) {
+    * {
+        flex-direction: column;
+    }
+  }
+
+  @media all and (max-width: 800px) {
+    * {
+        flex-direction: space-around;
     }
   }
