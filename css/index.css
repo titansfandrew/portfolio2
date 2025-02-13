@@ -9,7 +9,9 @@ body {
     align-items: flex-start;
     gap: 10px;
     display: flex;
-    
+    flex-grow: auto;
+    flex-shrink: auto;
+    width: 100%
 }
 
 .box1 {
@@ -60,9 +62,9 @@ body {
 }
 /* github styles */
 
-.box1-elements {
+.github-linkedin {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: row;
 }
 
 .github img {
@@ -70,31 +72,22 @@ body {
     height: 2.3em;
     max-width: 2.3em;
     max-height: 2.3em;
-    left: 45px;
-    top: 5px;
-    z-index: 2;
-    order: 3;
 }
 
 #gitborder {
     border-radius: 40px;
     background-color: #333b3f;
-    width: 200px;
-    height: 50px;
-    max-width: 200px;
-    max-height: 50px;
+    width: 12.5em;
+    height: 3.125em;
+    max-width: 12.5em;
+    max-height: 3.125em;
     border-color: #333b3f;
-    left: 30px;
-    top: 125px;
-    z-index: 2;
-    order: 3;
 }
 
 .github p {
     color: white;
     left: 85px;
     text-align: center;
-    order: 3;
 }
 /* linkedin styles */
 .linkedin img {
@@ -104,38 +97,38 @@ body {
     max-height: 2.3em;
     left: 40px;
     top: 5px;
-    z-index: 2;
-    order: 4;
 }
 
 #linkedinborder {
     border-radius: 40px;
     background-color: #333b3f;
-    width: 100%;
+    width: 12.5em;
     height: 100%;
-    width: 200px;
-    height: 50px;
+    width: 12.5em;
+    height: 3.125em;
     border-color: #333b3f;
-    left: 250px;
-    top: 125px;
-    z-index: 2;
-    order: 4;
 }
 
 .linkedin p {
     color: white;
     left: 80px;
     text-align: center;
-    order: 4;
 }
 /* name styles */
+
+.name-pic-info {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+    padding-left: 3px;
+    flex-shrink: auto;
+}
+
 .name {
     font-size: 2.7em;
     color: white;
     text-wrap: nowrap;
-    text-align: center;
-    left: 130px;
-    top: -20px;
 }
 /* my picture style */
 .myself img {
@@ -144,17 +137,15 @@ body {
     max-width: 7em;
     max-height: 7em;
     border-radius: 70px;
-    left: 10px;
-    top: 6px;
-    justify-content: start;
-    order: 1;
 }
 /* dev text styling */
 .dev {
-    font-size: 1.1em;
+    font-size: 1.4em;
     color: teal;
-    text-align: center;
-    order: 2;
+    text-wrap: nowrap;
+    position: absolute;
+    padding-left: 120px;
+    padding-top: 80px;
 }
 /* about text styling */
 .about p {
