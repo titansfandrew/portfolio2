@@ -13,12 +13,6 @@ body {
     width: 100%;
 }
 
-.allboxes .boxabout {
-    justify-content: left;
-    display: flex;
-    align-content: left;
-}
-
 .boxintro {
     background-color: #212529;
     width: 40rem;
@@ -28,6 +22,7 @@ body {
     max-width: 40rem;
     max-height: 15rem;
     z-index: -5;
+    grid-column: 1;
 }
 
 .boxabout {
@@ -50,7 +45,7 @@ body {
     border-radius: 40px;
     border-color: #212529;
     z-index: -5;
-    
+    grid-column: 1;
 }
 /* box h1 styling */
 .boxabout h1 {
@@ -79,12 +74,20 @@ body {
 .github img {
     width: 2.3em; 
     height: 2.3em;
-    max-width: 2.3em;
-    max-height: 2.3em;
-    order: 1;
     vertical-align: middle;
 }
 
+.github button {
+    background-color: #333b3f;
+    width: 11em;
+    height: 4em;
+    border-radius: 30px;
+    border: 0px;
+    color: white;
+    cursor: pointer;
+}
+
+/*
 #gitborder {
     border-radius: 40px;
     background-color: #333b3f;
@@ -103,15 +106,28 @@ body {
     text-align: center;
     order: 2;
 }
+*/
 /* linkedin styles */
 .linkedin img {
     width: 2.3em;
     height: 2.3em;
-    max-width: 2.3em;
-    max-height: 2.3em;
-    order: 1;
+    vertical-align: middle;
 }
 
+.linkedin button {
+    background-color: #333b3f;
+    width: 11em;
+    height: 4em;
+    border-radius: 30px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+}
+
+/*
 #linkedinborder {
     border-radius: 40px;
     background-color: #333b3f;
@@ -130,25 +146,25 @@ body {
     text-align: center;
     order: 2;
 }
+*/
 /* name styles */
 
 .name-pic-info {
     display: flex;
     flex-direction: row;
     gap: 10px;
-    justify-content: auto;
+    justify-content: center;
     align-items: center;
-    padding-left: 3px;
     flex-shrink: auto;
+    text-wrap: nowrap;
 }
 
 .name {
     font-size: 2.7em;
     color: white;
-    text-wrap: nowrap;
-    position: relative;
     align-items: center;
     justify-content: center;
+    flex-shrink: auto;
 }
 /* my picture style */
 .myself img {
@@ -162,7 +178,6 @@ body {
 .dev {
     font-size: 1.4em;
     color: teal;
-    text-wrap: nowrap;
     position: absolute;
     padding-left: 120px;
     padding-top: 80px;
